@@ -30,7 +30,7 @@
       </p>
       <ul class="users-menu-list">
         <li class="users-menu-login"><a href="#">Равшан Джамшутович</a></li>
-        <li class="user-menu-logout"><a href="#"><img src="img/logout.png" alt="Выход"></a></li>
+        <li class="user-menu-logout"><a class="visually-hidden" href="#">Выход</li>
         <li class="users-menu-registr"><a href="#">Мои заказы</a></li>
         <li class="users-menu-registr"><a href="#">Личный кабинет</a></li>
       </ul>
@@ -61,7 +61,7 @@
   <!-- /хлебные крошки -->
   <main>
     <h1 class="product-group">Перфораторы</h1>
-    <form action="#">
+    <form action="#" method="get">
       <h2 class="filters">Фильтр:</h2>
       <fieldset>
         <legend>Цена:</legend>
@@ -70,19 +70,26 @@
 
       <fieldset>
         <legend>Производители:</legend>
-        <input type="checkbox">Bosch
-        <input type="checkbox">Интерскол
-        <input type="checkbox">Makita
-        <input type="checkbox">Dewalt
-        <input type="checkbox">Hitachi
+        <input type="checkbox" name="bosch" id="bosch" value="Bosch" checked>
+        <label for="bosch">Bosch</label>
+        <input type="checkbox" name="interskol" id="interskol" value="Интерскол">
+        <label for="interskol">Интерскол</label>
+        <input type="checkbox" name="makita" id="makita" value="Makita" checked>
+        <label for="makita">Makita</label>
+        <input type="checkbox" name="dewalt" id="dewalt" value="Dewalt">
+        <label for="dewalt">Dewalt</label>
+        <input type="checkbox" name="hitachi" id="hitachi" value="Hitachi">
+        <label for="hitachi">Hitachi</label>
       </fieldset>
 
       <fieldset>
         <legend>Питание:</legend>
-        <input type="radio">Аккумуляторные
-        <input type="radio">Сетевые
-        <button class="btn">Показать</button>
+        <input type="radio" name="type-supply" id="accumulator" value="accumulator" checked>
+        <label for="accumulator">Аккумуляторные</label>
+        <input type="radio" name="type-supply" id="network" value="network">
+        <label for="network">Сетевые</label>
       </fieldset>
+      <button type="submit" class="btn-show">Показать</button>
     </form>
 
     <div class="sorting">
@@ -239,6 +246,14 @@
           </p>
         </li>
       </ul>
+      <div class="popup-basket">
+        <span class="add-product">Товар добавлен в корзину!</span>
+        <button class="popup-close" type="button">Закрыть</button>
+        <ul class="add-product-button">
+          <li><a class="add-product-order" href="#">Оформить заказ</a></li>
+          <li><a class="add-product-next" href="#">Продолжить покупки</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 
@@ -289,6 +304,16 @@
         Обратная связь:
         <a class="footer-important-link" href="#">mail@htmlacademy</a>
       </p>
+      <form action="#" method="get">
+        <label id="name-field">Ваше имя</labe>
+          <input type="text" name="name" id="name-field">
+          <label id="mail-field">Ваш e-mail</labe>
+            <input type="text" name="mail" id="mail-field">
+            <label for="letter-field">Текст письма</label>
+            <textarea name="letter" id="letter-field" cols="30" rows="10"></textarea>
+            <button class="send" type="submit">Отправить</button>
+            <button class="close" type="button" value="Закрыть"></button>
+      </form>
       <p class="footer-copyright">
         Разработано —
         <a class="footer-important-link" href="https://htmlacademy.ru/intensive/htmlcss"

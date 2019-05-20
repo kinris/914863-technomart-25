@@ -9,8 +9,9 @@
 <body>
   <header>
     <!-- верхняя панель -->
-    <a class="logo" href="index.html"><img src="http://placehold.it/150x100" width="110" height="20"
-        alt="Логотип магазина Техномарт"></a>
+    <a class="logo" href="index.html">
+      <img src="http://placehold.it/150x100" width="110" height="20" alt="Логотип магазина Техномарт">
+    </a>
     <a class="search" href="#">Поиск</a>
     <a class="bookmark" href="#">Закладки: 0</a>
     <a class="basket" href="#">Корзина: 10</a>
@@ -117,6 +118,17 @@
         Обратная связь:
         <a class="footer-important-link" href="#">mail@htmlacademy</a>
       </p>
+      <form action="#" method="get">
+        <label id="name-field">Ваше имя</labe>
+          <input type="text" name="name" id="name-field">
+          <label id="mail-field">Ваш e-mail</labe>
+            <input type="text" name="mail" id="mail-field">
+            <label for="letter-field">Текст письма</label>
+            <textarea name="letter" id="letter-field" cols="30" rows="10"></textarea>
+            <button class="send" type="submit">Отправить</button>
+            <button class="close" type="button" value="Закрыть"></button>
+      </form>
+
       <p class="footer-copyright">
         Разработано —
         <a class="footer-important-link" href="https://htmlacademy.ru/intensive/htmlcss"
