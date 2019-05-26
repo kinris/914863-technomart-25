@@ -4,23 +4,29 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic"
+    rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <!-- верхняя панель -->
-    <a class="logo">
-      <img src="img/logo-technomart.svg" width="109" height="18" alt="Логотип магазина Техномарт">
-    </a>
-    <form action="https://echo.htmlacademy.ru" method="get">
-      <p class="search">
-        <label for="search"><span class="visually-hidden">Поиск</span></label>
-        <input type="search" name="search" id="search" placeholder="Поиск">
-      </p>
-    </form>
-    <a class="bookmark" href="#">Закладки: 0</a>
-    <a class="basket" href="#">Корзина: 10</a>
-    <a class="order-form" href="#">Оформить заказ</a>
+    <div class="up-header">
+      <a class="logo">
+        <img src="img/logo-technomart.svg" width="109" height="18" alt="Логотип магазина Техномарт">
+      </a>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <p class="search">
+          <label for="search"><span class="visually-hidden">Поиск</span></label>
+          <input type="search" name="search" id="search" placeholder="Поиск">
+        </p>
+      </form>
+      <a class="bookmark" href="#">Закладки: 0</a>
+      <a class="basket" href="#">Корзина: 10</a>
+      <a class="order-form" href="#">Оформить заказ</a>
+    </div>
     <!-- /верхняя панель -->
 
     <div class="lower-header">
@@ -129,18 +135,21 @@
         <a class="footer-important-link" href="#">mail@htmlacademy</a>
       </p>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="contact-form">
-          <label for="name-field">Ваше имя</label>
-          <input type="text" name="name" id="name-field">
-        </p>
-        <p class="contact-form">
-          <label for="mail-field">Ваш e-mail</label>
-          <input type="email" name="mail" id="mail-field">
-        </p>
-        <p class="contact-form">
-          <label for="letter-field">Текст письма</label>
-          <textarea name="letter" id="letter-field"></textarea>
-        </p>
+        <ul class="contact-form">
+          <li>
+            <label for="name-field">Ваше имя</label>
+            <input type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+          </li>
+          <li>
+            <label for="mail-field">Ваш e-mail</label>
+            <input type="email" name="mail" id="mail-field" placeholder="email@example.com">
+          </li>
+          <li>
+            <label for="letter-field">Текст письма</label>
+            <textarea name="letter" id="letter-field" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+
+          </li>
+        </ul>
         <button class="send" type="submit">Отправить</button>
         <button class="close" type="button">Закрыть</button>
       </form>
