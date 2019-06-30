@@ -1,4 +1,3 @@
-
 /* глобальные стили */
 body {
   min-width: 940px;
@@ -36,6 +35,8 @@ a {
 }
 
 .users-menu-list,
+.category-list,
+.slides-switches,
 .main-navigation ul,
 .block-info-list,
 .footer-main-navigation-1,
@@ -46,7 +47,10 @@ a {
 .sorting-list,
 .catalog-list,
 .buy-popup,
-.add-product-buttons {
+.add-product-buttons,
+.slide-1,
+.slide-2,
+.category-list-slider {
   list-style: none;
 }
 
@@ -54,67 +58,50 @@ a {
 
 /* весь header */
 .up-header-wrapper {
-  height: 42px;
+  background-color: #293449;
+}
+
+.header-inner {
+  display: flex;
 
   background-color: #293449;
-  border-bottom: 5px solid #f4f7f9;
 }
 
 /* центровщик */
 .container {
-  display: flex;
-  flex-wrap: wrap;
-
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-/* .container a {display: block;} */
-
-/* /весь header */
-/*
-> На фокусе поле меняет цвет. 
-> Если иконка на родителе, она закроется. 
-> Как вариант - абсолютно позиционировать лейбл (текст в котором скрыт, но сам лейбл виден) поверх поля и давать ему эту иконку. 
-> Еще вариант - на само поле, но я хотел бы потом показать, как эту иконку делать на css, и тогда - только лейбл, причем лежащий в разметке ниже поля.
->Лейбл с визуально скрытым текстом нужно положить в разметке после инпута, остальное - на задании после лекции о декоративных элементах.
-*/
-
 /* верхняя часть header'a */
-.logo-img {
-  padding-top: 12px;
-  padding-bottom: 12px;
+.logo {
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 55px;
   padding-right: 55px;
+  margin-bottom: -5px;
 
   background-color: #ee3643;
   border-bottom: 5px solid #b52933;
 }
 
-.logo-img:hover {
+.logo:hover {
   background-color: #ca2c37;
 }
 
-.logo-img:active {
+.logo:active {
   background-color: #ba2732;
 }
 
-.search,
-.bookmark,
-.basket,
-.order-form-link {
-  height: 30px;
-  border-bottom: 5px solid #f4f7f9;
+.header-form {
+  flex: 1;
+  position: relative;
 }
 
-.search {
-  margin: 0;
-}
-
-.search input {
+input[type=search] {
+  box-sizing: border-box;
   width: 270px;
-  height: 42px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 50px;
@@ -227,36 +214,27 @@ a {
 /* /верхняя часть header'a */
 
 /* нижняя часть header'a */
+.low-heder-wrapper {
+  background-color: #f1f5f7;
+  margin-bottom: 60px;
+}
+
 .header-container {
-  background-color: #f1f5f7;
-  width: 1200px;
-  padding-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  width: 940px;
   margin: 0 auto;
-}
 
-.lower-header {
-  display: flex;
-  flex-wrap: wrap;
-
-  align-items: center;
-  padding-top: 40px;
-
-  background-color: #f1f5f7;
-}
-
-.lower-header a {
-  color: inherit;
-}
-
-.lower-header-wrapper {
-  display: flex;
+  padding-top: 46px;
+  padding-bottom: 40px;
 }
 
 .headline {
-  width: 197px;
+  width: 210px;
   margin: 0px;
-  padding-left: 52px;
-  padding-right: 71px;
+  padding-left: 50px;
+  padding-right: 70px;
 
   font-style: italic;
   font-size: 16px;
@@ -265,8 +243,9 @@ a {
   color: #ee3643;
 }
 
-p.phone {
-  padding-right: 70px;
+.users-menu {
+  display: flex;
+  justify-content: space-between;
 }
 
 .phone a {
@@ -280,22 +259,17 @@ p.phone {
 
   color: #e9292a;
 
-  border: 3px solid #ffffff;
+  margin-right: 70px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 70px;
   padding-right: 47px;
+  border: 3px solid #ffffff;
 }
 
-.address {
-  margin: 0;
-  padding: 0;
-}
-
-
+.address,
 .address a {
-  padding-left: 330px;
-
+  margin: 0;
   font-size: 14px;
   line-height: 24px;
 
@@ -306,14 +280,12 @@ p.phone {
   padding-right: 10px;
 }
 
-.users-menu-registr {
-  padding-right: -10px;
-}
 
 .users-menu-login a,
 .users-menu-registr a {
   font-size: 21px;
   line-height: 21px;
+  color: #000000;
 }
 
 .users-menu-login a:hover,
@@ -351,11 +323,9 @@ p.phone {
 .users-menu-logout a {
   background-image: url(../img/icon-logout.svg);
   background-image: url(../img/icon-user.svg);
-
   background-repeat: no-repeat;
   background-position-x: 0;
   background-position-y: center;
-
 }
 
 .users-menu-my-orders a,
@@ -381,6 +351,8 @@ p.phone {
 /* главное меню */
 .main-navigation {
   width: 940px;
+  margin: 0 auto;
+  padding-bottom: 60px;
 }
 
 .main-navigation ul {
@@ -413,6 +385,174 @@ p.phone {
 }
 
 /* /главное меню */
+
+/* слайдер */
+.category-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.category-list li:nth-child(2) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.categiry-item-1,
+.categiry-item-2,
+.categiry-item-3,
+.categiry-item-4,
+.categiry-item-5 {
+  width: 280px;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  padding-left: 23px;
+
+  background-repeat: no-repeat;
+  background-position-x: 213px;
+  background-position-y: center;
+}
+
+.category-list h2,
+.category-list-slider h2 {
+  margin: 0;
+  padding-bottom: 16px;
+
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.categiry-item-1 {
+  background-color: #ffbf47;
+  background-image: url(../img/icon-1.svg);
+}
+
+.categiry-item-2 {
+  background-color: #3bbce3;
+  background-image: url(../img/icon-2.svg);
+}
+
+.categiry-item-3 {
+  background-color: #dc91d8;
+  background-image: url(../img/icon-3.svg);
+}
+
+.categiry-item-4 {
+  background-color: #8ed78f;
+  background-image: url(../img/icon-4.svg);
+  margin-bottom: 20px;
+}
+
+.categiry-item-5 {
+  background-color: #ffc047;
+  background-image: url(../img/icon-5.svg);
+}
+
+.category-btn {
+  width: 135px;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  border-radius: 3px;
+  border: none;
+  background-color: rgba(229, 229, 229, 0.6);
+
+  font-size: 14px;
+  line-height: 18px;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.category-btn:hover {
+  background-color: rgb(204, 204, 204, 0.6);
+}
+
+.category-btn:active {
+  background-color: rgb(178, 178, 178, 0.6);
+}
+
+.slider-wrapper {
+  margin-bottom: 53px;
+
+  position: relative;
+
+  /* фон на время разметки */
+  background-color: #b2b229;
+}
+
+.slider {
+  margin: 0;
+  padding: 0;
+}
+
+.slide-1,
+.slide-2 {
+  width: 620px;
+  height: 266px;
+
+  color: #ffffff;
+}
+
+.slide-1 {
+  background-image: url(../img/slide-1-drill.jpg);
+}
+
+.slide-2 {
+  background-image: url(../img/slide-1-perforator.jpg);
+}
+
+.slide-header,
+.slide-text {
+  padding-left: 25px;
+}
+
+.slide-header {
+  margin: 0;
+  padding-top: 25px;
+
+  font-size: 30px;
+  line-height: 30px;
+
+  text-transform: uppercase;
+}
+
+.slide-text {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 34px;
+}
+
+.category-list-slider {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  margin: 0;
+  padding-left: 20px;
+}
+
+.slider-nav {
+  padding-left: 295px;
+}
+
+.slider-nav-btn-prev,
+.slider-nav-btn-next {
+  width: 6px;
+  height: 16px;
+  border: 4px solid #ffffff;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.slider-nav-btn-prev {
+  background: #ee3643;
+}
+
+/* /слайдер */
 
 /* хлебные крошки */
 .bread-crumbs-list {
@@ -460,7 +600,48 @@ p.phone {
 /* /хлебные крошки */
 
 /* основной контент*/
-.block-info {
+/* попоулярные */
+.popular-products-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f5f0;
+  margin-bottom: 20px;
+}
+
+.popular-header {
+  margin: 0;
+  padding: 30px;
+
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  color: #32425c;
+}
+
+.popular-catalog-list {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.popular-brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.popular-brand {
+  width: 218px;
+  margin-bottom: 20px;
+
+  text-align: center;
+  border: 1px solid #eaeaea
+}
+
+/* .попоулярные */
+
+.b.lock-info {
   margin: 0;
   font-family: PT Sans, Arial, sans-serif;
   font-size: 13px;
@@ -498,8 +679,7 @@ p.phone {
   background: #fb565a
 }
 
-.help-button {
-  /* width: 460px; */
+.link-btn {
   padding-top: 12px;
   padding-bottom: 11px;
   border-radius: 3px;
@@ -515,7 +695,7 @@ p.phone {
   background-color: #ee3643;
 }
 
-.help-button {
+.link-btn {
   background-color: #b22832;
 }
 
@@ -533,15 +713,17 @@ p.phone {
 
   background-color: #f2f6f8;
 }
+
 .sorting {
   margin-bottom: 20px;
   padding: 9px 0;
   background: #f7f3ec;
   border-radius: 3px;
 }
+
 .sorting-list .sorting span {
   display: inline-block;
-vertical-align: middle;
+  vertical-align: middle;
 
   margin-right: 139px;
   padding-left: 19px;
@@ -555,7 +737,7 @@ vertical-align: middle;
   padding-top: 13px;
   padding-bottom: 14px;
   padding-left: 18px;
-   
+
   font-family: PT Sans, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -575,7 +757,7 @@ fieldset {
   width: 220px;
   padding-top: 13px;
   padding-bottom: 14px;
-  
+
   font-family: PT Sans, Arial, sans-serif;
   font-size: 17px;
   line-height: 30px;

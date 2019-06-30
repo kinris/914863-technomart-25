@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Техномарт</title>
+  <title>Мой Техномарт</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
@@ -14,37 +14,35 @@
 <body>
   <header>
     <!-- верхняя часть heder'a -->
-    <div class="up-header-wrappep">
+    <div class="up-header-wrapper">
       <div class="container">
-        <div class="up-header">
-          <a class="logo">
-            <img src="img/logo-technomart.svg" width="109" height="18" alt="Логотип магазина 
-            Техномарт">
-          </a>
-          <form action="https://echo.htmlacademy.ru" method="get">
-            <p class="search">
-              <input type="search" name="search" id="search" placeholder="Поиск:">
-              <label class="search-label" for="search">
-                <span class="visually-hidden">Поиск</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                  <path fill="#6a7180"
-                    d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
-                </svg>
-              </label>
-            </p>
-          </form>
-          <a class="bookmark" href="#">Закладки: 0</a>
-          <a class="basket" href="#">Корзина: 10</a>
-          <a class="order-form-link" href="#">Оформить заказ</a>
-        </div>
+        <a class="logo">
+          <img class="logo-img" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина 
+                  Техномарт">
+        </a>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <p class="search">
+            <input type="search" name="search" id="search" placeholder="Поиск:">
+            <label class="search-label" for="search">
+              <span class="visually-hidden">Поиск</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                <path fill="#6a7180"
+                  d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
+              </svg>
+            </label>
+          </p>
+        </form>
+        <a class="bookmark" href="#">Закладки: 0</a>
+        <a class="basket" href="#">Корзина: 10</a>
+        <a class="order-form-link" href="#">Оформить заказ</a>
       </div>
     </div>
-    <!-- /верхняя чась header'a -->
+    <!-- /верхняя часть heder'a -->
 
     <!-- нижняя часть heder'a -->
-    <div class="container">
-      <div class="lower-header">
-        <div class="lower-header-box">
+    <div class="header-container">
+      <div class="container">
+        <div class="lower-header">
           <div class="lower-header-wrapper">
             <h1 class="headline">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
             <p class="phone">
@@ -60,23 +58,22 @@
           <p class="address">
             <a href="#">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
           </p>
+          <!-- /нижняя часть heder'a -->
 
+          <!-- главное меню -->
+          <nav class="main-navigation">
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="#">Компания</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Спецпредложения</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <!-- /главное меню -->
         </div>
-        <!-- /нижняя часть heder'a -->
-
-        <!-- главное меню -->
-        <nav class="main-navigation">
-          <ul class="navigation-list">
-            <li class="navigation-item"><a href="index.html">Главная</a></li>
-            <li class="navigation-item"><a href="#">Компания</a></li>
-            <li class="navigation-item"><a href="#">Каталог</a></li>
-            <li class="navigation-item"><a href="#">Новости</a></li>
-            <li class="navigation-item"><a href="#">Спецпредложения</a></li>
-            <li class="navigation-item"><a href="#">Доставка</a></li>
-            <li class="navigation-item"><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
-        <!-- /главное меню -->
       </div>
     </div>
   </header>
@@ -84,7 +81,7 @@
   <!-- хлебные крошки -->
   <div class="container">
     <ul class="bread-crumbs-list">
-      <li class="bread-crumbs-item-first"><a href="index.html">Главная</a></li>
+      <li class="bread-crumbs-item-first"><a href="index.html"><span class="visually-hidden">Главная</span></a></li>
       <li class="bread-crumbs-item"><a href="#">Каталог</a></li>
       <li class="bread-crumbs-item"><a href="#">Инструмент</a></li>
       <li class="bread-crumbs-item-last">Перфораторы</li>
@@ -94,17 +91,16 @@
 
   <main>
     <div class="container">
-
       <h1 class="product-group">Перфораторы</h1>
       <form action="https://echo.htmlacademy.ru" method="POST">
         <h2 class="filters">Фильтр:</h2>
         <fieldset>
-          <legend>Цена:</legend>
-          <!-- ползунок -->
+          <legend class="price-choise">Цена:</legend>
+          0 <input type="range" name="dayscount" min="0" max="30000" step="1"> 30000
         </fieldset>
 
         <fieldset>
-          <legend>Производители:</legend>
+          <legend class="products-choise">Производители:</legend>
           <p class="filter-form">
             <input type="checkbox" name="vendors" id="bosch" value="bosch" checked>
             <label for="bosch">Bosch</label>
@@ -142,7 +138,7 @@
       </form>
 
       <div class="sorting">
-        <h3 class="visually-hidden">Сортировка:</h3>
+        <span>Сортировка:</span>
         <ul class="sorting-list">
           <li class="sorting-item">По цене</li>
           <li class="sorting-item">По типу</li>
