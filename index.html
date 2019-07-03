@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="all-header">
     <!-- верхняя часть heder'a -->
     <div class="up-header-wrapper">
       <div class="container header-inner">
@@ -38,19 +38,22 @@
     <!-- /верхняя часть heder'a -->
 
     <!-- нижняя часть heder'a -->
-    <div class="low-heder-wrapper">
+    <div class="container">
       <div class="header-container">
-        <h1 class="headline">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-        <div>
-          <p class="phone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
-          <p class="address"><a href="#">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a></p>
+        <div class="headline">
+          <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         </div>
-        <div class="users-menu">
-          <p class="users-menu-login"><a href="#">Войти</a></p>
-          <p class="users-menu-registr"><a href="#">Регистрация</a></p>
+
+        <div class="header-contacts">
+          <a class="phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <a class="address" href="#">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
+        </div>
+
+        <div class="users">
+          <a class="users-menu users-menu-login" href="#">Войти</a>
+          <a class="users-menu users-menu-registr" href="#">Регистрация</a>
         </div>
       </div>
-
       <!-- главное меню -->
       <nav class="main-navigation">
         <ul>
@@ -65,62 +68,63 @@
       </nav>
       <!-- /главное меню -->
     </div>
-
-    <!-- /нижняя часть heder'a -->
+    </div>
   </header>
+  <!-- /нижняя часть heder'a -->
 
   <main>
     <div class="container">
-      <!-- слайдер -->
-      <section>
-        <ul class="category-list">
-          <li class="categiry-item-1">
-            <h2>Материалы</h2>
-            <a class="category-btn" href="#">На любой вкус</a>
+      <!-- слайдер 02.07.19 -->
+      <ul class="category-list">
+        <li class="category-item category-item-yellow category-item-pail">
+          <h2>Материалы</h2>
+          <a class="category-btn" href="#">На любой вкус</a>
+        </li>
+        <li class="category-item category-item-blue category-item-tool">
+          <h2>Инструменты</h2>
+          <a class="category-btn" href="#">На все случаи</a>
+        </li>
+        <li class="category-item category-item-violet category-item-technics">
+          <h2>Техника</h2>
+          <a class="category-btn" href="#">Для стройки</a>
+        </li>
+      </ul>
+
+      <div class="sliders-container">
+        <div class="slider">
+          <div class="slide slide-active">
+            <h3 class="slide-header">Дрели</h3>
+            <p class="slide-text">Соседям на радость!</p>
+            <img src="img/slide-drill.jpg" alt="слайд дрели" class="slide-img">
+          </div>
+          <div class="slide">
+            <h3 class="slide-header">Перфораторы</h3>
+            <p class="slide-text">Настощие мужские игрушки</p>
+            <img src="img/slide-perforator.jpg" alt="слайд перфораторы" class="slide-img">
+          </div>
+
+          <nav class="slider-nav">
+            <button class="slider-nav-btn slider-nav-btn-prev"><span class="visually-hidden">Предыдущий
+                слайд</span></button>
+            <button class="slider-nav-btn slider-nav-btn-next"><span class="visually-hidden">Следующий
+                слайд</span></button>
+            <button class="slider-nav-btn-arrow slider-nav-btn-arrow-prev"><span class="visually-hidden">Предыдущий слайд</span></button>
+            <button class="slider-nav-btn-arrow slider-nav-btn-arrow-next"><span class="visually-hidden">Следующий слайд</span></button>
+          </nav>
+          <a class="link-btn open-catalog">Открыть каталог</a>
+        </div>
+
+        <ul class="category-list-slider">
+          <li class="category-item category-item-green category-item-basket">
+            <h2>Скидка 50%</h2>
+            <a class="category-btn" href="#">На 350 товаров</a>
           </li>
-          <li class="categiry-item-2">
-            <h2>Инструменты</h2>
-            <a class="category-btn" href="#">На все случаи</a>
-          </li>
-          <li class="categiry-item-3">
-            <h2>Техника</h2>
-            <a class="category-btn" href="#">Для стройки</a>
+          <li class="category-item category-item-yellow category-item-car">
+            <h2>Доставка</h2>
+            <a class="category-btn" href="#">Бесплатно</a>
           </li>
         </ul>
-
-        <div class="slider-wrapper">
-          <ul class="slider">
-            <li class="slide-1">
-              <h3 class="slide-header">Дрели</h3>
-              <p class="slide-text">Соседям на радость!</p>
-              <a href="#" class="slide-link"></a>
-            </li>
-            <!-- <li class="slide-2">
-              <h3 class="slide-header">Перфораторы</h3>
-              <p class="slide-text">Настощие мужские игрушки</p>
-              <a href="#" class="slide-link"></a>
-            </li> -->
-          </ul>
-          <ul class="category-list-slider">
-            <li class="categiry-item-4">
-              <h2>Скидка 50%</h2>
-              <a class="category-btn" href="#">На 350 товаров</a>
-            </li>
-            <li class="categiry-item-5">
-              <h2>Доставка</h2>
-              <a class="category-btn" href="#">Бесплатно</a>
-            </li>
-          </ul>
-          <nav class="slider-nav">
-            <button class="slider-nav-btn slider-nav-btn-prev"><span class="visually-hidden">Первый
-                слайд</span></button>
-            <button class="slider-nav-btn slider-nav-btn-next"><span class="visually-hidden">Второй
-                слайд</span></button>
-          </nav>
-          <a class="link-btn">Открыть каталог</a>
-
-        </div>
-      </section>
+      </div>
       <!-- /слайдер -->
 
       <section class="popular-products">
@@ -128,6 +132,7 @@
           <h2 class="popular-header">Популярные товары</h2>
           <a class="link-btn" href="#">Все популярные товары</a>
         </div>
+        <!-- товары -->
         <ul class="catalog-list popular-catalog-list">
           <li class="catalog-item">
             <a href="#">
