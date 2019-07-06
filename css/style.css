@@ -944,6 +944,7 @@ input[type=search] {
   display: block;
   width: 300px;
 }
+
 /* /блок  информации */
 
 
@@ -1035,9 +1036,6 @@ fieldset {
   display: flex;
   flex-direction: column;
   width: 330px;
-
-  /* фон на время разметки */
-  /* background-color: rgba(209, 212, 16, 0.3); */
 }
 
 .logo-footer {
@@ -1050,9 +1048,6 @@ fieldset {
 .up-footer-links {
   width: 560px;
   padding-top: 38px;
-
-  /* фон на время разметки */
-  /* background-color: rgba(16, 212, 65, 0.3); */
 }
 
 .up-footer-links ul {
@@ -1064,13 +1059,10 @@ fieldset {
   padding-bottom: 34px;
 }
 
-/* фон на время разметки */
-/* background-color: rgba(68, 16, 212, 0.3); */
-}
-
 .footer-contacts {
   font-size: 18px;
   line-height: 24px;
+  font-style: normal;
 
   color: #ffffff;
 }
@@ -1097,19 +1089,36 @@ fieldset {
 .footer-navigation-item-bottom:active {
   color: #ad956f;
 }
-/* /верхняя часть footer'a */
 
-/* нижняя часть footer'a */
 .lower-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 107px;
+
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #ffffff;
+
   background-color: #293449;
-  padding-bottom: 20px;
-  /* на время разметки */
 }
 
 .footer-copyright {
-  font-size: 16px;
-  line-height: 18px;
+  width: 230px;
+  margin: 0;
+  padding: 0;
+
   color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  width: 230px;
+  margin: 0;
+  padding: 0;
 }
 
 .social-button {
@@ -1117,14 +1126,40 @@ fieldset {
   height: 41px;
   background-color: #212a3a;
   border-radius: 50%;
+  display: block;
 
   color: #ffffff;
+}
+
+.social-button:hover,
+.social-button:active {
+  background-color: #ee3643;
+}
+
+.social-icons li:nth-child(2) {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: space-around;
+
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-text p {
+  margin: 0;
 }
 
 .footer-important-link {
   font-size: 16px;
   line-height: 18px;
   color: #ffd180;
+
+  display: block;
 }
 
 .footer-important-link:hover {
@@ -1136,22 +1171,64 @@ fieldset {
   color: #ee3643;
 }
 
-/* /нижняя часть footer'a */
-
+/* /футер */
 /* форма обр связи */
 .contact-form {
+  position: relative;
   width: 610px;
   border-top: 10px solid #ee3643;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.25);
+
+  /* display: none; */
+
   background-color: #ffffff;
 }
 
 .contact-form-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 460px;
+  margin: 0;
+  padding: 0;
+  padding-top: 48px;
+  padding-left: 80px;
+  padding-bottom: 37px;
+
   font-size: 18px;
   line-height: 18px;
 }
 
-.contact-form-list input,
+.contact-form-list:last-child {
+  width: 100%;
+}
+
+.contact-form-item {
+  width: 50%;
+  padding-bottom: 22px;
+}
+
+.contact-form-item-letter {
+  width: 100%;
+}
+
+.name-field,
+.mail-field,
+.letter-field {
+  display: block;
+  padding-bottom: 7px;
+}
+
 .contact-form-list textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form-item input,
+.contact-form-item-letter textarea {
+  padding-left: 14px;
+  padding-top: 9px;
+  padding-bottom: 7px;
   font-family: PT Sans, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1173,7 +1250,6 @@ textarea:focus {
 }
 
 .contact-form-send {
-  width: 610px;
   padding-top: 23px;
   padding-bottom: 29px;
 
@@ -1201,9 +1277,16 @@ textarea:focus {
   background-color: #b22832;
 }
 
-/* .close { 
+.close {
+  position: absolute;
+  top: 22px;
+  right: 21px;
+
+  border: none;
+  background: none;
+
   background-image: url(../img/icon-close.svg);
   background-repeat: no-repeat;
-} */
+}
 
 /* /форма обр связи */
